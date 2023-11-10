@@ -1,0 +1,48 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"name":"game-2048"}}
+  creationTimestamp: "2023-11-10T07:01:24Z"
+  deletionTimestamp: "2023-11-10T07:27:15Z"
+  labels:
+    kubernetes.io/metadata.name: game-2048
+  name: game-2048
+  resourceVersion: "351926"
+  uid: df3cb1ad-ae2a-4b3b-8a64-1254dd66a670
+spec:
+status:
+  conditions:
+  - lastTransitionTime: "2023-11-10T07:27:21Z"
+    message: All resources successfully discovered
+    reason: ResourcesDiscovered
+    status: "False"
+    type: NamespaceDeletionDiscoveryFailure
+  - lastTransitionTime: "2023-11-10T07:27:21Z"
+    message: All legacy kube types successfully parsed
+    reason: ParsedGroupVersions
+    status: "False"
+    type: NamespaceDeletionGroupVersionParsingFailure
+  - lastTransitionTime: "2023-11-10T07:27:21Z"
+    message: All content successfully deleted, may be waiting on finalization
+    reason: ContentDeleted
+    status: "False"
+    type: NamespaceDeletionContentFailure
+  - lastTransitionTime: "2023-11-10T07:27:21Z"
+    message: 'Some resources are remaining: ingresses.networking.k8s.io has 1 resource
+      instances'
+    reason: SomeResourcesRemain
+    status: "True"
+    type: NamespaceContentRemaining
+  - lastTransitionTime: "2023-11-10T07:27:21Z"
+    message: 'Some content in the namespace has finalizers remaining: ingress.k8s.aws/resources
+      in 1 resource instances'
+    reason: SomeFinalizersRemain
+    status: "True"
+    type: NamespaceFinalizersRemaining
+  phase: Terminating
