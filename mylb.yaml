@@ -4,9 +4,14 @@ metadata:
   name: my-service
 spec:
   selector:
-    app.kubernetes.io/name: game-2050
+    app.kubernetes.io/name: MyApp
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 80
+      targetPort: 9376
+  clusterIP: 10.0.171.239
   type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 192.0.2.127
