@@ -8,10 +8,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 9376
-  clusterIP: 10.0.171.239
+      targetPort: 80
   type: LoadBalancer
-status:
-  loadBalancer:
-    ingress:
-    - ip: 192.0.2.127
