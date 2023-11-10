@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-	name: mygame-svc
+  name: my-service
 spec:
-	selector:
-		app: game-2050
-	ports:
-	- protocol: TCP
-	  port:80
-	  targetPort: 80
-	type: LoadBalancer  
+  selector:
+    app.kubernetes.io/name: game-2050
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
